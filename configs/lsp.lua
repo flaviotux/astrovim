@@ -4,15 +4,7 @@ lsp.formatting = {
   format_on_save = true,
 }
 
-lsp.servers = {
-  "gopls",
-  "tsserver",
-  "templ",
-  "html",
-  "htmx",
-  "tailwindcss",
-  "rust_analyzer",
-}
+lsp.servers = require("user.configs.overrides").lsp.ensure_installed
 
 lsp.setup_handlers = {
   rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,

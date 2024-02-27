@@ -31,26 +31,23 @@ M.treesitter = {
 
 M.lsp = {
   ensure_installed = {
-    ensure_installed = {
-      -- lua stuff
-      "lua_ls",
-      "stylua",
+    -- lua stuff
+    "lua_ls",
 
-      -- web stuff
-      "tailwindcss",
-      "graphql",
-      "tsserver",
-      "eslint",
-      "html",
-      "htmx",
+    -- web stuff
+    "tailwindcss",
+    "graphql",
+    "tsserver",
+    "eslint",
+    "html",
+    "htmx",
 
-      -- go stuff
-      "gopls",
-      "templ",
+    -- go stuff
+    "gopls",
+    "templ",
 
-      -- rust stuff
-      "rust_analyzer",
-    },
+    -- rust stuff
+    "rust_analyzer",
   },
 }
 

@@ -1,6 +1,7 @@
 local overrides = require "user.configs.overrides"
 
 local plugins = {
+  "simrat39/rust-tools.nvim",
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -8,10 +9,6 @@ local plugins = {
     opts = overrides.catppuccin,
   },
   {
-    "jay-babu/mason-nvim-dap.nvim",
-    opts = overrides.dap,
-  },
-  {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
@@ -23,7 +20,6 @@ local plugins = {
     dependencies = "mfussenegger/nvim-dap",
     config = function(_, opts) require("dap-go").setup(opts) end,
   },
-  "simrat39/rust-tools.nvim",
   {
     "saecki/crates.nvim",
     ft = { "rust", "toml" },
@@ -33,7 +29,11 @@ local plugins = {
       crates.show()
     end,
   },
-  { -- override nvim-cmp plugin
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    opts = overrides.dap,
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = overrides.cmp,
   },
