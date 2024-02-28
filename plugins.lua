@@ -45,7 +45,7 @@ local plugins = {
     "williamboman/mason-lspconfig.nvim",
     opts = overrides.lsp,
   },
-  -- require("user.configs.statusline").plugins,
+  require("user.configs.statusline").plugins,
 }
 
 return plugins

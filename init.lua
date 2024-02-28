@@ -11,10 +11,10 @@ M.options = {
   },
 }
 
--- local StatusLine = require "user.configs.statusline"
---
--- M.icons = StatusLine.icons
--- M.heirline = StatusLine.heirline
+local StatusLine = require "user.configs.statusline"
+
+M.icons = StatusLine.icons
+M.heirline = StatusLine.heirline
 
 M.lsp = require "user.configs.lsp"
 

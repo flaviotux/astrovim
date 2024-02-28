@@ -72,7 +72,7 @@ M.catppuccin = {
     light = "latte",
     dark = "mocha",
   },
-  transparent_background = true,
+  -- transparent_background = true,
   term_colors = true,
 }
 
