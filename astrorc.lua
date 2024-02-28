@@ -1,8 +1,11 @@
 local M = {
-  opt = { cmdheight = 1 },
+  options = {
+    opt = { cmdheight = 1 },
+  },
+
   colorscheme = "catppuccin",
-  lsp = require "user.configs.lsp",
   plugins = require "user.plugins",
+  lsp = require "user.configs.lsp",
 }
 
 return M
