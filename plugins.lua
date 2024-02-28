@@ -45,6 +45,10 @@ local plugins = {
     "williamboman/mason-lspconfig.nvim",
     opts = overrides.lsp,
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = overrides.signs,
+  },
   require("user.configs.statusline").plugins,
 }
 

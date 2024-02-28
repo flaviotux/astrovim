@@ -91,4 +91,8 @@ M.dap = {
   ensure_installed = { "delve", "js" },
 }
 
+M.signs = {
+  current_line_blame = true,
+}
+
 return M
