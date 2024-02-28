@@ -3,12 +3,6 @@ local overrides = require "user.configs.overrides"
 local plugins = {
   "simrat39/rust-tools.nvim",
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    opts = overrides.catppuccin,
-  },
-  {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
@@ -30,6 +24,16 @@ local plugins = {
     end,
   },
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = overrides.catppuccin,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    optional = true,
+    opts = overrides.telescope,
+  },
+  {
     "jay-babu/mason-nvim-dap.nvim",
     opts = overrides.dap,
   },
@@ -49,7 +53,7 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     opts = overrides.signs,
   },
-  require("user.configs.statusline").plugins,
+  -- require("user.configs.statusline").plugins,
 }
 
 return plugins

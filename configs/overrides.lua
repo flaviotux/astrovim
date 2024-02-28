@@ -66,6 +66,7 @@ M.mason = {
   },
 }
 
+---@type CatppuccinOptions
 M.catppuccin = {
   flavor = "mocha",
   background = {
@@ -74,6 +75,28 @@ M.catppuccin = {
   },
   -- transparent_background = true,
   term_colors = true,
+  integrations = {
+    alpha = true,
+    aerial = true,
+    dap = true,
+    dap_ui = true,
+    mason = true,
+    neotree = true,
+    notify = true,
+    nvimtree = false,
+    semantic_tokens = true,
+    symbols_outline = true,
+    telescope = true,
+    ts_rainbow = false,
+    which_key = true,
+  },
+}
+
+M.telescope = {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
 }
 
 -- override the options table that is used in the `require("cmp").setup()` call
