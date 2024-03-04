@@ -11,6 +11,9 @@ lsp.setup_handlers = {
 }
 
 lsp.config = {
+  templ = {
+    filetypes = { "templ" },
+  },
   htmx = {
     filetypes = { "html", "templ" },
   },
@@ -18,7 +21,7 @@ lsp.config = {
     filetypes = { "html", "templ" },
   },
   gopls = {
-    -- filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
     settings = {
       completeUnimported = true,
       usePlaceholders = true,

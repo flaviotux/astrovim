@@ -53,6 +53,9 @@ M.lsp = {
 
 M.mason = {
   ensure_installed = {
+    -- lua stuff
+    "stylua",
+
     -- web stuff
     "js-debug-adapter",
     "prettier",
