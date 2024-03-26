@@ -34,7 +34,6 @@ local plugins = {
   },
   {
     "stevearc/conform.nvim",
-    --  for users those who want auto-save conform + lazyloading!
     event = { "VeryLazy" },
     opts = overrides.conform,
   },
@@ -76,7 +75,6 @@ local plugins = {
       },
     },
   },
-  -- require("user.configs.statusline").plugins,
 }
 
 return plugins

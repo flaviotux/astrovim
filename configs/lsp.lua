@@ -42,7 +42,7 @@ lsp.config = {
     },
   },
   tailwindcss = {
-    filetypes = { "templ", "astro", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    filetypes = { "templ", "javascriptreact", "typescriptreact" },
     init_options = { userLanguages = { templ = "html" } },
   },
   rust_analyzer = {
