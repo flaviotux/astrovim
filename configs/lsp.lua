@@ -1,7 +1,15 @@
 local lsp = {}
 
 lsp.formatting = {
-  format_on_save = true,
+  format_on_save = {
+    enabled = true, -- enable format on save
+    ignore_filetypes = { -- disable format on save for specified filetypes
+      "go",
+      "gomod",
+      "gowork",
+      "gotmpl",
+    },
+  },
 }
 
 lsp.servers = require("user.configs.overrides").lsp.ensure_installed
@@ -20,6 +28,9 @@ lsp.config = {
   html = {
     filetypes = { "html", "templ" },
   },
+  graphql = {
+    filetypes = { "graphql", "gql" },
+  },
   gopls = {
     filetypes = { "go", "gomod", "gowork", "gotmpl" },
     settings = {
@@ -31,7 +42,7 @@ lsp.config = {
     },
   },
   tailwindcss = {
-    filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+    filetypes = { "templ", "astro", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     init_options = { userLanguages = { templ = "html" } },
   },
   rust_analyzer = {

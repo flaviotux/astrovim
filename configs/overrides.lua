@@ -59,13 +59,14 @@ M.mason = {
     -- web stuff
     "js-debug-adapter",
     "prettier",
-    "eslint_d",
+    "eslint",
     "delve",
 
     -- go stuff
     "goimports-reviser",
     "gofumpt",
     "golines",
+    "templ",
   },
 }
 
@@ -76,7 +77,7 @@ M.catppuccin = {
     light = "latte",
     dark = "mocha",
   },
-  -- transparent_background = true,
+  transparent_background = true,
   term_colors = true,
   integrations = {
     alpha = true,
@@ -103,6 +104,11 @@ M.telescope = {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
 }
 
 -- override the options table that is used in the `require("cmp").setup()` call
@@ -122,6 +128,38 @@ M.dap = {
 
 M.signs = {
   current_line_blame = true,
+  signs = {
+    add = { text = "│" },
+    change = { text = "│" },
+    delete = { text = "󰍵" },
+    topdelete = { text = "‾" },
+    changedelete = { text = "~" },
+    untracked = { text = "│" },
+  },
+}
+
+M.conform = {
+  lsp_fallback = true,
+
+  formatters_by_ft = {
+    lua = { "stylua" },
+
+    javascript = { "eslint_d" },
+    typescript = { "eslint_d" },
+    css = { "eslint_d" },
+    html = { "prettier" },
+
+    go = { "gofumpt", "goimports-reviser", "golines" },
+    templ = { "templ" },
+
+    rust = { "rust-analyzer" },
+  },
+
+  format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_fallback = true,
+  },
 }
 
 return M
